@@ -28,7 +28,9 @@
     <main>
       <div class="right-container">
         <div class="f-cont">
-          <label for="bill">Bill</label>
+          <div class="sub-title">
+            <label for="bill">Bill</label>
+          </div>
           <input type="number" id="bill" />
           <span id="icon"><i class="fas fa-dollar-sign"></i></span>
         </div>
@@ -36,11 +38,11 @@
         <div class="option-tips f-cont">
           <label for=""> Select Tip % </label>
           <div class="options">
-            <button value="5">5%</button>
-            <button value="10">10%</button>
-            <button value="15">15%</button>
-            <button value="25">25%</button>
-            <button value="50">50%</button>
+            <button>5</button>
+            <button>10</button>
+            <button>15</button>
+            <button>25</button>
+            <button>50</button>
             <input
               type="number"
               name="custom"
@@ -50,8 +52,11 @@
           </div>
         </div>
         <div class="f-cont">
-          <label for="people">Number of People</label>
-          <input type="number" id="people" />
+          <div class="sub-title">
+            <label for="people">Number of People</label>
+            <p class="err-msg">can't be zero</p>
+          </div>
+          <input type="number" id="numOfPeople" value="0" />
           <span id="icon"><i class="fas fa-user-alt"></i></span>
         </div>
       </div>
@@ -62,7 +67,7 @@
               <h5>Tip Amount</h5>
               <p>/ person</p>
             </div>
-            <div class="result-person"></div>
+            <div class="result-person">$0.00</div>
           </div>
 
           <div class="total flex">
@@ -70,7 +75,7 @@
               <h5>Total</h5>
               <p>/ person</p>
             </div>
-            <div class="result-total"></div>
+            <div class="result-total">$0.00</div>
           </div>
         </div>
         <button class="reset">Reset</button>
