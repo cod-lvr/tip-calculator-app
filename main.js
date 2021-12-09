@@ -19,6 +19,7 @@ optionsBtns.forEach((btn) => {
 function calculateTip(tip) {
   const billAmount = bill.value;
   const numOfPeople = people.value;
+
   if (numOfPeople === "0") {
     people.style.border = "4px solid #ff944d";
     errMessage.style.display = "inline-block";
@@ -41,7 +42,7 @@ function addDomValue(amountperson, totalPerson) {
 
 resetBtn.addEventListener("click", () => {
   bill.value = "";
-  people.value = "";
+  people.value = "0";
   resultPerson.textContent = `$${0.0}`;
   resultTotal.textContent = `$${0.0}`;
 });
