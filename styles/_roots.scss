@@ -6,6 +6,12 @@ body {
   font-family: "Space Mono", monospace;
   height: 100vh;
   max-width: 100%;
+  @media (min-width: 1440px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 }
 
 input {

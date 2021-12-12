@@ -13,6 +13,7 @@ const resetBtn = document.querySelector(".reset");
 optionsBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
     calculateTip(btn.textContent);
+    resetBtn.disabled = false;
   });
 });
 
@@ -29,7 +30,6 @@ function calculateTip(tip) {
     people.style.border = "none";
   }
 
-  console.log(billAmount, numOfPeople);
   const tipAmoutPerPerson = (+billAmount * tip) / 100;
   const tipTotalPerPerson = tipAmoutPerPerson * +numOfPeople;
   addDomValue(tipAmoutPerPerson, tipTotalPerPerson);
@@ -41,7 +41,7 @@ function addDomValue(amountperson, totalPerson) {
 }
 
 resetBtn.addEventListener("click", () => {
-  bill.value = "";
+  bill.value = "0";
   people.value = "0";
   resultPerson.textContent = `$${0.0}`;
   resultTotal.textContent = `$${0.0}`;

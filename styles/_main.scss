@@ -65,7 +65,7 @@ main {
         }
         input {
           display: inline-block;
-          width: 40%;
+          width: 42%;
           padding: 1rem 0.6rem;
           border-radius: 10px;
           &::placeholder {
@@ -105,6 +105,10 @@ main {
       color: $V-dark-cyan;
       font-weight: $f-three;
       font-size: $form-input-size;
+
+      &:disabled {
+        background-color: $D-grayish-cyan-2;
+      }
     }
     .flex {
       display: flex;
@@ -114,8 +118,43 @@ main {
     .result-total,
     .result-person {
       color: $Strong-cyan;
-      font-size: $form-input-size;
+      font-size: 30px;
       font-weight: $f-three;
+    }
+  }
+  @media (min-width: 1440px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 1rem;
+    box-shadow: 0 5px 10px $L-grayish-cyan-1;
+    .right-container {
+      width: 50%;
+      height: fit-content;
+      input {
+        width: 100%;
+      }
+      .option-tips {
+        .options {
+          button {
+            width: calc(100% * 1 / 3 - 10px);
+          }
+          input {
+            width: 25%;
+          }
+        }
+      }
+    }
+    .left-container {
+      width: 45%;
+      height: 85%;
+      position: relative;
+      .reset {
+        position: absolute;
+        width: 93%;
+        bottom: 4%;
+      }
     }
   }
 }
